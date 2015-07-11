@@ -1,0 +1,20 @@
+<h2>List of all products:</h2>
+<%@products.each do |product|%>
+    <% if product.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(product.errors.count, "error") %>
+            some error with product output:</h2>
+          <ul>
+            <% product.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <%end%>
+
+    <p><%=image_tag(product.image_url)%></p>
+    <p><%=product.title%></p>
+    <p><%=product.description%></p>
+    <p><%=product.price%></p>
+
+<%end%>

@@ -1,0 +1,8 @@
+<h2>Product edition:</h2>
+<%=form_for(@product) do |form|%>
+    <p><%=form.text_field :image_url,:placeholder=>"image"%></p>
+    <p><%=form.text_field :title,:placeholder=>"title"%></p>
+    <p><%=form.text_area :description,:placeholder=>"description"%></p>
+    <p><%=form.text_field :price,:placeholder=>"price"%></p>
+    <p><%=form.submit "Update"%></p>
+<%end%>
