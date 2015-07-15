@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :line_items
+
   root 'products#index'
   resources :products
   get '/main' => 'products#index'
