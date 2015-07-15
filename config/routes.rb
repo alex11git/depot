@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/edit/:id' => 'products#edit'
   post '/edit/:id' => 'products#edit'
   get '/erase/:id' => 'products#erase'
+  #--
+  get '/stores' => 'stores#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
